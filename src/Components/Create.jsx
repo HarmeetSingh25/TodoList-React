@@ -1,8 +1,8 @@
 import { nanoid } from 'nanoid'
 import React, { useState } from 'react'
 
-const Create = ({data, setdata}) => {
-   
+const Create = ({ data, setdata }) => {
+
 
     const [Tittle, setTittle] = useState("")
     return (
@@ -10,7 +10,7 @@ const Create = ({data, setdata}) => {
             <form action=""
                 onSubmit={(e) => {
                     e.preventDefault()
-                    if (Tittle.length == 0) {
+                    if (Tittle.trim() == "") {
                         console.error("Fill The tittle ");
                         return
 
