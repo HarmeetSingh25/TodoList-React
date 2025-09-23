@@ -7,7 +7,7 @@ const Create = ({ data, setdata }) => {
     const [Tittle, setTittle] = useState("")
     return (
         <div>
-            <form action=""
+            <form className='flex gap-2 mt-5' action=""
                 onSubmit={(e) => {
                     e.preventDefault()
                     if (Tittle.trim() == "") {
@@ -32,7 +32,7 @@ const Create = ({ data, setdata }) => {
                 }}>
 
                 <input
-                    className='border'
+                    className='border-0 outline-0 bg-green-50 w-100 text-black p-4 rounded-xs '
                     type="text"
                     value={Tittle}
                     placeholder='Enter Todo'
@@ -40,7 +40,7 @@ const Create = ({ data, setdata }) => {
                         setTittle(e.target.value);
 
                     }} />
-                <button>Create Todo</button>
+                <button className='bg-amber-400 p-2 rounded-xs'>Create Todo</button>
 
             </form>
 

@@ -9,7 +9,7 @@ const App = () => {
   // console.log(data);
 
   return (
-    <div>
+    <div className='w-screen h-screen bg-emerald-900 py-10 px-15 gap-5 flex  justify-between'>
       <Create data={data} setdata={setdata} />
       <Read data={data} setdata={setdata} />
     </div>
