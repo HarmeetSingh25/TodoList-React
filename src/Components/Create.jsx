@@ -32,6 +32,7 @@ const Create = ({ data, setdata }) => {
                 }}>
 
                 <input
+                    className='border'
                     type="text"
                     value={Tittle}
                     placeholder='Enter Todo'
