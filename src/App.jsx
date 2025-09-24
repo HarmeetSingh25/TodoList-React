@@ -4,7 +4,7 @@ import Read from './Components/Read'
 
 const App = () => {
   const [data, setdata] = useState([
-    // { id: 1, Tittle: "fds", iscomplete: false }
+    { id: 1, Tittle: "fds", iscomplete: false }
   ])
   // console.log(data);
 
