@@ -1,16 +1,19 @@
 import { nanoid } from "nanoid";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { textcontext } from "../Wrapper";
 
-const Create = ({ data, setdata }) => {
+const Create = () => {
+  const [data, setdata] = useContext(textcontext)
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm(
-    // { defaultValues: { Tittle: "" },}
-);
+      // { defaultValues: { Tittle: "" },}
+    );
 
   // Success: form is valid
   const onSubmit = (Data) => {
@@ -22,10 +25,10 @@ const Create = ({ data, setdata }) => {
 
     setdata((prev) => [...prev, newTodo]);
 
-    toast.success("🦄 Todo added to list", {
+    toast.success("Todo added to list", {
       position: "top-center",
       autoClose: 3000,
-      theme: "light",
+      theme: "dark",
     });
 
     reset();
@@ -37,7 +40,7 @@ const Create = ({ data, setdata }) => {
       toast.error(errors.Tittle.message, {
         position: "top-center",
         autoClose: 3000,
-        theme: "light",
+        theme: "dark",
       });
     }
   };
@@ -73,6 +76,7 @@ const Create = ({ data, setdata }) => {
         >
           Create Todo
         </button>
+
       </form>
     </div>
   );
