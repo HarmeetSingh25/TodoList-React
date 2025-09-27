@@ -17,6 +17,8 @@ const Create = () => {
 
   // Success: form is valid
   const onSubmit = (Data) => {
+    // console.log(Data);
+
     const newTodo = {
       ...Data,
       id: nanoid(),
@@ -24,6 +26,10 @@ const Create = () => {
     };
 
     setdata((prev) => [...prev, newTodo]);
+    // let copyData = [...data]
+    // copyData.push(Data)
+    // setdata(copyData)
+    // setdata((prev) =>{ console.log(prev)});
 
     toast.success("Todo added to list", {
       position: "top-center",
